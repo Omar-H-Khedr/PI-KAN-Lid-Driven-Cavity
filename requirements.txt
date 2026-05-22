@@ -5,4 +5,5 @@ matplotlib
 psutil
 pyyaml
 tabulate
+openpyxl
 pykan
