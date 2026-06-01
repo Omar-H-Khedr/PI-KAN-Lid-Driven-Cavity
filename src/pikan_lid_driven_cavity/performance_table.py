@@ -10,24 +10,21 @@ from typing import Iterable
 
 
 PERFORMANCE_COLUMNS = [
-    "method",
-    "reynolds",
-    "nu",
+    "re",
+    "variant",
+    "family",
+    "n_parameters",
     "training_time_seconds",
-    "final_loss",
-    "peak_cpu_memory_mb",
-    "peak_gpu_memory_mb",
+    "final_training_loss",
     "lbfgs_closure_calls",
-    "max_speed",
-    "primary_vortex_x",
-    "primary_vortex_y",
-    "n_collocation",
-    "n_boundary",
-    "adam_epochs",
-    "lbfgs_max_iter",
+    "peak_gpu_memory_mb",
 ]
 
-METHOD_ORDER = {"PI-KAN": 0, "PINN": 1}
+VARIANT_ORDER = {
+    "fast_spline_kan_medium": 0,
+    "pinn_baseline": 1,
+    "pinn_wide": 2,
+}
 
 
 def load_metric_records(metrics_dir: Path) -> list[dict[str, object]]:
@@ -47,9 +44,9 @@ def load_metric_records(metrics_dir: Path) -> list[dict[str, object]]:
 
     records.sort(
         key=lambda row: (
-            int(row["reynolds"]),
-            METHOD_ORDER.get(str(row["method"]), 99),
-            str(row["method"]),
+            int(row["re"]),
+            VARIANT_ORDER.get(str(row["variant"]), 99),
+            str(row["variant"]),
         )
     )
     return records
@@ -108,8 +105,8 @@ def generate_performance_tables(
     metrics_dir: Path,
     output_dir: Path,
     *,
-    markdown: bool = True,
-    xlsx: bool = True,
+    markdown: bool = False,
+    xlsx: bool = False,
 ) -> list[Path]:
     """Generate performance table files from metric JSON files."""
     records = load_metric_records(metrics_dir)

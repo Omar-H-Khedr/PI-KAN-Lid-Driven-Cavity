@@ -1,0 +1,23 @@
+{
+  "re": 400,
+  "nu": 0.0025,
+  "variant": "pinn_baseline",
+  "family": "PINN",
+  "n_parameters": 12802,
+  "training_time_seconds": 92.2433979511261,
+  "final_training_loss": 0.17514698416497923,
+  "lbfgs_closure_calls": 278,
+  "peak_gpu_memory_mb": 413.8759765625,
+  "quick_mode": false,
+  "L2_u": 0.26474123066350125,
+  "L2_v": 0.2405405490813926,
+  "L2_mean": 0.2526408898724469,
+  "Linf_u": 0.5076189668594857,
+  "Linf_v": 0.46590381894238797,
+  "Linf_mean": 0.48676139290093684,
+  "vortex_x": 0.05050505050505051,
+  "vortex_y": 0.8787878787878789,
+  "vortex_center_error": 0.5734970024233719,
+  "boundary_condition_MSE": 0.004803163041509088,
+  "PDE_residual_norm": 0.15810583459819935
+}

@@ -28,14 +28,14 @@ def parse_args() -> argparse.Namespace:
         help="Directory where performance_table.* files are written.",
     )
     parser.add_argument(
-        "--no-markdown",
+        "--markdown",
         action="store_true",
-        help="Skip performance_table.md.",
+        help="Also write performance_table.md.",
     )
     parser.add_argument(
-        "--no-xlsx",
+        "--xlsx",
         action="store_true",
-        help="Skip performance_table.xlsx.",
+        help="Also write performance_table.xlsx.",
     )
     return parser.parse_args()
 
@@ -45,8 +45,8 @@ def main() -> int:
     written = generate_performance_tables(
         args.metrics_dir,
         args.output_dir,
-        markdown=not args.no_markdown,
-        xlsx=not args.no_xlsx,
+        markdown=args.markdown,
+        xlsx=args.xlsx,
     )
     for path in written:
         print(path.relative_to(REPO_ROOT))
@@ -55,4 +55,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
