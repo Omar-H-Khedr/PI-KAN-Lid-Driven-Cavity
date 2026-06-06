@@ -1,13 +1,10 @@
-# PI-KAN Lid-Driven Cavity Reproducibility Package
+# FastSpline-KAN Lid-Driven Cavity Reproducibility Package
 
-This repository contains the Computer Physics Communications reproducibility package for the manuscript:
+This repository contains the reproducibility package for the Scientific Reports manuscript:
 
-**Physics-Informed Kolmogorov-Arnold Networks for Efficient Simulation of Lid-Driven Cavity Flow**
+**FastSpline-KAN for Physics-Informed Lid-Driven Cavity Simulation: Reference-Profile Accuracy and Computational Cost across Reynolds Numbers**
 
-The package compares a FastSpline-KAN physics-informed model with baseline
-and wide PINN variants for the steady two-dimensional incompressible
-lid-driven cavity problem at
-`Re = 100, 400, 1000, 5000`.
+The package compares a FastSpline-KAN physics-informed model with baseline and wide PINN variants for the steady two-dimensional incompressible lid-driven cavity problem at `Re = 100, 400, 1000, 5000`.
 
 The archived Kaggle validation outputs are preserved in a clean GitHub layout.
 The repository documents the reproduction path and includes deterministic
