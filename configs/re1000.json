@@ -1,0 +1,13 @@
+{
+    "reynolds": 1000,
+    "nu": 0.001,
+    "n_collocation": 2500,
+    "n_boundary": 2500,
+    "adam_epochs": 200,
+    "learning_rate": 0.001,
+    "lbfgs_max_iter": 1000,
+    "grid_n": 100,
+    "seed": 42,
+    "lid_velocity": 1.0,
+    "rho": 1.0
+}

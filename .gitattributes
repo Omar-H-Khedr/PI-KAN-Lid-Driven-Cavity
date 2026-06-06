@@ -1,0 +1,17 @@
+* text=auto
+
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.cff text eol=lf
+
+*.png binary
+*.npz binary
+*.xlsx binary
+results/model/0.0_state binary
+results/model/0.0_cache_data binary
+
