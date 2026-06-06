@@ -1,9 +1,0 @@
-torch
-numpy
-pandas
-matplotlib
-psutil
-pyyaml
-tabulate
-openpyxl
-pykan
